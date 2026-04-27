@@ -11,7 +11,7 @@ const StoreContextProvider = (props) => {
     const [language, setLanguage] = useState('en'); // 'en' or 'te'
     const [settings, setSettings] = useState(null);
 
-    const url = "http://localhost:5000";
+    const url = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
     const fetchProducts = async () => {
         try {
